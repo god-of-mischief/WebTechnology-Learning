@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Study Roulette v0.2</title>
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<div class="container">
+<h1>📚 Study Roulette</h1>
+<input id="searchInput" placeholder="🔍 Search books or chapters">
+<button id="pickBtn">🎲 PICK MY NEXT CHAPTER</button>
+
+<div class="panel">
+<input id="bookName" placeholder="Book Name">
+<div id="chapterContainer"><input class="chapterInput" placeholder="Chapter Name"></div>
+<button id="addChapterBtn">+ Add Chapter</button>
+<button id="saveBookBtn">💾 Save Book</button>
+</div>
+
+<div class="stats"><span id="bookCount"></span> • <span id="chapterCount"></span></div>
+<div id="books"></div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body></html>

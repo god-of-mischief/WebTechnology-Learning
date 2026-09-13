@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keerthana 💛</title>
+
+<style>
+body {
+ margin:0;
+ font-family:sans-serif;
+ background:#050510;
+ color:white;
+ text-align:center;
+ overflow:hidden;
+}
+
+/* stars */
+.star {
+ position:absolute;
+ width:2px;
+ height:2px;
+ background:white;
+ opacity:0.7;
+}
+
+/* sections */
+.screen {
+ display:none;
+ padding:30px;
+ height:100vh;
+ justify-content:center;
+ align-items:center;
+ flex-direction:column;
+}
+.active { display:flex; }
+
+/* button */
+button {
+ padding:12px 20px;
+ border:none;
+ border-radius:25px;
+ background:#ff4d6d;
+ color:white;
+ margin-top:20px;
+}
+
+/* chat */
+.chat {
+ max-width:350px;
+ text-align:left;
+}
+.msg {
+ padding:10px;
+ margin:6px;
+ border-radius:12px;
+ max-width:70%;
+}
+.me { background:#ff4d6d; margin-left:auto; }
+.her { background:#222; }
+
+/* typing bubble */
+.typing {
+ font-size:14px;
+ opacity:0.6;
+}
+
+/* hidden stars click */
+.click-star {
+ font-size:24px;
+ margin:10px;
+ cursor:pointer;
+}
+
+/* fade */
+.fade {
+ animation:fadeIn 1.5s;
+}
+@keyframes fadeIn {
+ from {opacity:0;}
+ to {opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<script>
+// generate stars
+for(let i=0;i<120;i++){
+ let s=document.createElement("div");
+ s.className="star";
+ s.style.top=Math.random()*100+"vh";
+ s.style.left=Math.random()*100+"vw";
+ document.body.appendChild(s);
+}
+</script>
+
+<!-- INTRO -->
+<div class="screen active" id="intro">
+<h2 class="fade">Some people become important…</h2>
+<h3 class="fade">unexpectedly.</h3>
+<button onclick="next('chat')">Enter 💛</button>
+</div>
+
+<!-- CHAT -->
+<div class="screen" id="chat">
+<div class="chat" id="chatBox"></div>
+<p id="typing" class="typing"></p>
+<button onclick="next('timeline')">Continue</button>
+</div>
+
+<!-- TIMELINE -->
+<div class="screen" id="timeline">
+<h2>09 May 2001</h2>
+<p>Someone special was born ✨</p>
+<br>
+<h2>25 years later…</h2>
+<p>Somehow… we met online 💛</p>
+<button onclick="next('stars')">Continue</button>
+</div>
+
+<!-- STAR MESSAGES -->
+<div class="screen" id="stars">
+<h2>Tap the stars ⭐</h2>
+<div>
+<span class="click-star" onclick="alert('You matter 🤍')">⭐</span>
+<span class="click-star" onclick="alert('I’m glad I met you')">⭐</span>
+<span class="click-star" onclick="alert('Happy 25th 💛')">⭐</span>
+</div>
+<button onclick="next('message')">Continue</button>
+</div>
+
+<!-- MESSAGE -->
+<div class="screen" id="message">
+<h2>Happy 25th Birthday 🎂</h2>
+<p>
+It’s strange…<br>
+we never met.<br><br>
+But somehow,<br>
+you still became important.<br><br>
+I’m really glad you exist 💛
+</p>
+<button onclick="next('final')">Unlock 🎁</button>
+</div>
+
+<!-- FINAL -->
+<div class="screen" id="final">
+<h2>🎉</h2>
+<p>You’re my favorite part of the internet 💛</p>
+<p>This was all for you.</p>
+</div>
+
+<script>
+function next(id){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ if(id==="chat") startChat();
+}
+
+/* chat with typing */
+const msgs=[
+ {t:"Hey",c:"me"},
+ {t:"Heyy 😌",c:"her"},
+ {t:"You know what day it is?",c:"me"},
+ {t:"Hmm 👀",c:"her"},
+ {t:"Your birthday 🎂",c:"me"},
+ {t:"Aww 🥺",c:"her"},
+ {t:"I’m really glad I met you",c:"me"}
+];
+
+function startChat(){
+ let i=0;
+ let box=document.getElementById("chatBox");
+ let typing=document.getElementById("typing");
+
+ function show(){
+  if(i<msgs.length){
+   typing.innerText="typing...";
+   setTimeout(()=>{
+    typing.innerText="";
+    let d=document.createElement("div");
+    d.className="msg "+msgs[i].c;
+    d.innerText=msgs[i].t;
+    box.appendChild(d);
+    i++;
+    show();
+   },800);
+  }
+ }
+ show();
+}
+</script>
+
+</body>
+</html>

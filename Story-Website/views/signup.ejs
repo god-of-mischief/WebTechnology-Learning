@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignUp for Amazing Stuff</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <video class="smokeVideo" muted autoplay loop src="images/ThickSmoke.mp4" type="video/mp4">
+    <p>This browser cannot show HTML5 video.</p>
+  </video>
+  <main class="form-signin hero-text">
+    <form action="/login" method="post">
+      <img class="mb-4" src="images/Loki-logo.png" alt="" width="72" height="57">
+
+      <h1 class="h3 mb-3 fw-normal">SignUp and start Reading/Writing!</h1>
+
+      <input type="text" name="fName" class="form-control top" placeholder="First Name" required>
+      <input type="text" name="lName" class="form-control middle" placeholder="Last Name" required>
+      <input type="email" name="email" class="form-control middle" placeholder="Email" required>
+      <input type="password" name="password" id="password" class="form-control middle" placeholder="Password" required>
+      <input type="password" name="confirm_password" id="confirm_password" class="form-control bottom" placeholder="Password" required>
+      <p> <%= missMatch %> </p>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign me up</button>
+      <p></p>
+      <p class="mt-5 mb-3 text-muted">&copy; Lwrites</p>
+    </form>
+  </main>
+
+</body>
+
+</html>

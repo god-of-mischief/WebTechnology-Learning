@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The BigBang Club</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7c38e880ad.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- JavaScript files-->
+    <script src="index.js"></script>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+</svg></button>
+
+<section id="title">
+  <div class="container-fluid">
+    <!-- Nav Bar -->
+    <nav class="navbar  navbar-expand-lg navbar-light navbar-default">
+      <a class="navbar-brand brandname" href="index.html" style="background-color: transparent !important;">
+          <img src="images/jedi-order-brands.svg" width="50" height="60" alt="The Bigbang Club logo">
+          The BigBang Club
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Donate</a>
+          </li>
+          <li class="divider nav-link">|</li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1 class="hero-text">Start your journey in web development here</h1>
+      <a href="courses.html"><button type="button" class="btn btn-primary btn-lg">View Full Courses</button></a>
+    </div>
+    <img class="divider2" src="images/decoration.svg" alt="content-divider-img">
+  </div>
+</section>
+  <div class="how-it-works">
+    <div class="how-it-works-title">
+      <div class="container">
+        <h2 class="bold">How it works</h2>
+        <p>This is the website we wish we had when we were learning on our own. We scour the internet looking for only the best resources to supplement your learning and present them in a logical order.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Features -->
+
+<section id="features">
+    <div class="row">
+      <div class="feature-box col-lg-4 col-sm-6">
+        <i class="icon fas fa-journal-whills fa-4x"></i>
+        <h3>Learn</h3>
+        <p>Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
+      </div>
+      <div class="feature-box col-lg-4 col-sm-6">
+        <i class="icon fas fa-laptop-code fa-4x"></i>
+        <h3>Build</h3>
+        <p>Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
+      </div>
+      <div class="feature-box col-lg-4 col-sm-6">
+        <i class="icon fas fa-comments fa-4x"></i>
+        <h3>Connect</h3>
+        <p>You're not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
+      </div>
+    </div>
+</section>
+
+  <div class="details">
+    <h2 class="details-heading">Everything for you to become a web developer</h2>
+    <div class="row row1">
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+              <div class="card-header">
+                <img src="images/html.svg" alt="HTML-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <a href="html.html" style="text-decoration: none; color: #000;"><h3>HTML</h3></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+              <div class="card-header">
+                  <img src="images/css.svg" alt="CSS-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <a href="css.html" style="text-decoration: none; color: #000;"><h3>CSS</h3></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+              <div class="card-header">
+                  <img src="images/javascript.svg" alt="JS-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <a href="javascript.html" style="text-decoration: none; color: #000;"><h3>JavaScript</h3></a>
+
+              </div>
+          </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+              <div class="card-header">
+                <img src="images/html.svg" alt="HTML-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <a href="Aitools.html" style="text-decoration: none; color:#000;"><h3>AI Tools</h3></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+              <div class="card-header">
+                  <img src="images/css.svg" alt="CSS-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <h3>CSS</h3>
+              </div>
+          </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+              <div class="card-header">
+                  <img src="images/javascript.svg" alt="JS-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <h3>JavaScript</h3>
+
+              </div>
+          </div>
+      </div>
+    </div>
+      <div class="row justify-content-center">
+        <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+              <div class="card-header">
+                  <img src="images/javascript.svg" alt="JS-img" style="width: 160px; height: 160px;">
+              </div>
+              <div class="card-body">
+                <h3>JavaScript</h3>
+
+              </div>
+          </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <img src="images/javascript.svg" alt="JS-img" style="width: 160px; height: 160px;">
+            </div>
+            <div class="card-body">
+              <h3>JavaScript</h3>
+
+            </div>
+        </div>
+      </div>
+
+
+  </div>
+  <a href="courses.html"><button type="button" class="btn button2 btn-lg">Get Started</button></a>
+
+</div>
+
+<footer class="white-section" id="footer">
+  <div class="container-fluid2">
+    <img src="images/jedi-order-brands.svg" width="50" height="70" alt="The Bigbang Club logo"><br>
+    <a class="navbar-brand brandname" href="index.html" style="background-color: transparent !important; color: #cc9543;">
+
+      The BigBang Club
+  </a><br>
+    <a href=""><i class="social-icon fab fa-facebook-f"></i></a>
+    <a href=""><i class="social-icon fab fa-twitter"></i></a>
+    <a href=""><i class="social-icon fab fa-instagram"></i></a>
+    <a href=""><i class="social-icon fas fa-envelope"></i></a>
+    <p id=copyRight>© Copyright 2020 The BigBang Club</p>
+  </div>
+
+
+</footer>
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

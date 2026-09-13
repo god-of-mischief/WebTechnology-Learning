@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Car / Stat - Asphalt Legends Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Add Car / Stat</h1>
+    <nav>
+      <a href="index.html">Browse Cars</a>
+      <a href="add.html">Add Car / Stat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="add-form">
+      <h2>Enter Car Data</h2>
+
+      <label>
+        Is this a new car?
+        <input type="checkbox" id="is-new-car" />
+      </label>
+
+      <!-- Fields for a new car -->
+      <div id="new-car-fields">
+        <label>
+          Car name:
+          <input type="text" id="car-name" placeholder="e.g. BMW M4 GTS" />
+        </label>
+
+        <label>
+          Brand:
+          <input type="text" id="car-brand" placeholder="e.g. BMW" />
+        </label>
+
+        <label>
+          Class:
+          <select id="car-class">
+            <option value="D">D</option>
+            <option value="C">C</option>
+            <option value="B">B</option>
+            <option value="A">A</option>
+            <option value="S">S</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Fields for an existing car -->
+      <div id="existing-car-fields" style="display:none;">
+        <label>
+          Select existing car:
+          <select id="existing-car-select">
+            <!-- Filled by JavaScript -->
+          </select>
+        </label>
+      </div>
+
+      <h3>Stat Entry</h3>
+
+      <label>
+        Rank:
+        <input type="number" id="stat-rank" placeholder="e.g. 1800" />
+      </label>
+
+      <label>
+        Level (star level):
+        <input type="number" id="stat-level" placeholder="e.g. 3" />
+      </label>
+
+      <label>
+        Top speed (km/h):
+        <input type="number" id="stat-top-speed" placeholder="e.g. 330" />
+      </label>
+
+      <label>
+        Acceleration:
+        <input type="number" id="stat-acceleration" placeholder="e.g. 80" />
+      </label>
+
+      <label>
+        Handling:
+        <input type="number" id="stat-handling" placeholder="e.g. 75" />
+      </label>
+
+      <label>
+        Nitro:
+        <input type="number" id="stat-nitro" placeholder="e.g. 70" />
+      </label>
+
+      <button id="generate-json">Generate JSON</button>
+
+      <h3>Generated JSON</h3>
+      <p>
+        Copy this into your <code>cars.json</code> file and merge with existing data.
+      </p>
+      <pre id="json-output"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (document.querySelector('.add-form')) {
+        initAddPage();
+      }
+    });
+  </script>
+</body>
+</html>

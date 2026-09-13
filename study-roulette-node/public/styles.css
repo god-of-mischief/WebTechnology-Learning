@@ -1,0 +1,183 @@
+:root{
+  --bg:#fff9e6;
+  --ink:#0f0f0f;
+  --coral:#ef476f;
+  --yellow:#ffd166;
+  --blue:#118ab2;
+  --green:#06d6a0;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Nunito,sans-serif;
+  background:radial-gradient(circle at 20px 20px, rgba(0,0,0,.08) 2px, transparent 2px) 0 0/32px 32px, var(--bg);
+  color:var(--ink);
+}
+
+.app{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px;
+  display:grid;
+  gap:24px;
+}
+
+.card{
+  background:#fff;
+  border:4px solid var(--ink);
+  box-shadow:8px 8px 0 var(--ink);
+  border-radius:24px;
+  padding:24px;
+}
+
+.hero{
+  display:grid;
+  gap:20px;
+}
+
+h1,h2,.pick-btn,.eyebrow{
+  font-family:Fredoka,sans-serif;
+}
+
+h1{
+  font-size:clamp(3rem,7vw,5.5rem);
+  line-height:.95;
+  margin:.2em 0;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.85rem;
+}
+
+.sub{
+  max-width:50ch;
+  font-size:1.1rem;
+}
+
+.pick-btn,
+.form-card button{
+  border:4px solid var(--ink);
+  background:var(--coral);
+  color:#fff;
+  font-weight:900;
+  text-transform:uppercase;
+  border-radius:18px;
+  padding:18px 24px;
+  cursor:pointer;
+  box-shadow:6px 6px 0 var(--ink);
+}
+
+.form-card form{
+  display:grid;
+  gap:12px;
+}
+
+input,
+textarea{
+  width:100%;
+  border:4px solid var(--ink);
+  border-radius:16px;
+  padding:14px;
+  font:inherit;
+  font-weight:800;
+  background:#fff;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.library{
+  display:grid;
+  gap:12px;
+}
+
+.books{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+}
+
+.book{
+  padding:18px;
+  background:#fff;
+  border:4px solid var(--ink);
+  box-shadow:8px 8px 0 var(--ink);
+  border-radius:22px;
+}
+
+.chapters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0;
+}
+
+.chip{
+  background:var(--yellow);
+  border:2px solid var(--ink);
+  border-radius:999px;
+  padding:6px 10px;
+  font-weight:800;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+}
+
+.chip button{
+  border:none;
+  background:none;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(15,15,15,.75);
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+
+.hidden{
+  display:none;
+}
+
+.reel{
+  max-width:520px;
+  width:100%;
+  text-align:center;
+}
+
+.reel-text{
+  font-size:2rem;
+  font-weight:900;
+  min-height:80px;
+  display:grid;
+  place-items:center;
+}
+
+.result{
+  background:var(--green);
+  border:4px solid var(--ink);
+  border-radius:18px;
+  padding:16px;
+  font-weight:900;
+}
+
+@media (max-width:640px){
+  .app{
+    padding:16px;
+  }
+  .card{
+    padding:18px;
+  }
+}

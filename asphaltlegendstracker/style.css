@@ -1,0 +1,110 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0f1115;
+  color: #e5e7eb;
+}
+
+header {
+  background: #111827;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav a {
+  margin-left: 16px;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111827;
+  border: 1px solid #1f2937;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #1f2937;
+}
+
+th {
+  background: #0b0f19;
+  cursor: pointer;
+}
+
+tr:hover {
+  background: #162032;
+}
+
+th.sort-asc::after {
+  content: " ▲";
+  font-size: 0.8em;
+}
+
+th.sort-desc::after {
+  content: " ▼";
+  font-size: 0.8em;
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.add-form input,
+.add-form select,
+.add-form button {
+  margin-top: 4px;
+  padding: 6px 8px;
+  width: 100%;
+  max-width: 300px;
+  background: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  border-radius: 4px;
+}
+
+.add-form button {
+  width: auto;
+  cursor: pointer;
+}
+
+#json-output {
+  background: #1f2937;
+  padding: 10px;
+  white-space: pre-wrap;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}

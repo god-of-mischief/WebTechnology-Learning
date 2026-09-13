@@ -1,0 +1,568 @@
+.container-fluid{
+  padding: 2% 15%;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Montserrat-Black', sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
+  color: #4a4a4a;;
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+p {
+  text-align: center;
+  color: rgba(74,74,74,0.7);
+  font-size: 1.125rem;
+  letter-spacing: 0.2px;
+  margin: 0;
+  line-height: 1.88;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+a{
+  color: red;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* navigation bar */
+.navbar-default .navbar-brand{
+    color: #cc9543;
+}
+
+.navbar-brand{
+    color: #6743cc;
+    font-family: 'Sacramento', cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.jedi-order{
+  width: 30px;
+  height: 40px;
+}
+.navbar{
+  padding: 0 0 4.5rem;
+}
+
+.nav-link{
+  font-size: 1rem;
+  color: rgba(74,74,74,0.7);
+  letter-spacing: 0.2px;
+  font-weight: bold;
+}
+
+.hero{
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.hero-text{
+  color: #cc9543;
+  font-size: 2.5rem;
+  padding-bottom: 1.875rem;
+  font-weight: normal;
+}
+
+.hero-sub-text{
+  margin-bottom: 0;
+  padding-bottom: 4.375rem;
+}
+
+.hero-img{
+  border: #cc9543;
+}
+
+.firist-button{
+  align-items: center;
+}
+
+/* Download Buttons */
+
+.download-button{
+  margin: 5% 3% 5% 0;
+  width: 50;
+}
+
+.divider2{
+  height: 144px;
+  margin: 0 auto;
+  width: 470px;
+  padding: 20px 0 10px;
+}
+
+.how-it-works {
+  margin-bottom: 50px;
+}
+
+.how-it-works .how-it-works-title h2 {
+  margin-bottom: 36px;
+}
+
+.how-it-works .how-it-works-title{
+  text-align: center;
+}
+
+.how-it-works .how-it-works-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.how-it-works .how-it-works-title p {
+  padding-top: 1em;
+}
+
+
+/* Feature icons */
+.details{
+  padding: 7% 15%;
+  background-color: #F5F5F5;
+  position: relative;
+  z-index: 1;
+}
+
+.details-box{
+  text-align: center;
+  padding: 5% 2%;
+
+}
+
+
+#features{
+  padding: 2% 15% 7%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.icon{
+  color: #cc9543;
+  margin-bottom: 1rem;
+}
+
+.icon:hover{
+  color:goldenrod;
+}
+
+.feature-box{
+  text-align: center;
+  padding: 0% 5%;
+  background-color: #fff;
+}
+
+.btn{
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 3.5rem;
+}
+
+.details{
+  text-align: center;
+
+}
+
+.details-heading{
+  font-weight: bold;
+}
+
+.price-text{
+  font-size: 3rem;
+  line-height: 1.5;
+  color: black;
+}
+.pricing-column{
+  padding: 0% 2% 2%;
+}
+
+.card{
+  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
+}
+
+
+.card-header{
+  background-color: #fff;
+  color: black;
+}
+
+.row1{
+  padding-top: 3%;
+}
+
+
+.button2{
+  margin-top: 40px;
+  background-color: #cc9543;
+  border-radius: 0.2em;
+  box-shadow: 0 0.05em 0.25em 0 rgba(0,0,0,0.5);
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  padding: 1rem 3.5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.container-fluid2{
+  padding: 5% 7%;
+  text-align: center;
+}
+
+.social-icon{
+  padding: 2% 4% 2%;
+  color: #cc9543;
+}
+
+.social-icon:hover{
+  color: #000;
+}
+
+@media (max-width:1046px) {
+  .navbar-brand{
+    font-size: 1.6rem;
+
+  }
+}
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  /* font-size: 18px; */
+  border: none;
+  outline: none;
+  background-color: yellowgreen;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 20%;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+
+/* ----------------------------------------------------- */
+
+.course-heading-text{
+  color: #cc9543;
+  margin-bottom: 35px;
+}
+
+.card-main {
+  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.track-card {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.track-card-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.track-card-title h1 {
+  margin: 0;
+  margin-right: auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  letter-spacing: 0.2px;
+}
+
+.button--secondary {
+  background-color: #cc9543;
+}
+
+.button3 {
+  background-color: #cc9543;
+  border-radius: 0.2em;
+  box-shadow: 0 0.05em 0.25em 0 rgba(0,0,0,0.5);
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  padding: 1rem 3.5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.p1 {
+  margin: 24px auto;
+  max-width: 770px;
+}
+
+#title1{
+  background-image: linear-gradient(#fff, #e8e8e8);
+}
+
+/* ------------------------------------------------------------------------ */
+
+.about-section{
+  text-align: center;
+}
+
+.about-heading{
+  color: #ce973e;
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  margin-bottom: 2rem;
+}
+
+.about-heading-text{
+  padding: 0% 20%;
+}
+
+.truth{
+  text-align: center;
+}
+
+.truth-heading{
+  margin: 60px 0px;
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
+}
+
+.truth-content-heading{
+  padding-bottom: 60px;
+}
+
+.truth-text{
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  padding-bottom: 18px;
+}
+
+.truth-sub-text{
+  padding: 0% 30%;
+}
+
+.quotes{
+  padding: 2% 7%;
+  margin-bottom: 30px;
+}
+
+.quote-box{
+  padding-bottom: 2%;
+}
+
+.card1{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.quote-text{
+  padding: 1% 3%;
+  text-align: left;
+}
+
+/* Team */
+
+.team{
+  background-image: linear-gradient(#fff, #e8e8e8);
+  padding: 2% 7%;
+  text-align: center;
+}
+
+.team-heading{
+  color: #cc9543;
+}
+
+.column{
+  text-align: center;
+  align-items: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #106973;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.back-name{
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.back-text {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.team-img{
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width:1400px) and (min-width:1186px){
+  .flip-card{
+    width: 250px;
+    height: 250px;
+  }
+
+  .team-img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width:1186px) and (min-width:992px){
+  .flip-card{
+    width: 200px;
+    height: 200px;
+  }
+
+  .team-img{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width:690px){
+  .row{
+    display: inline;
+  }
+}
+
+.contact-section{
+  background-image: linear-gradient(#fff, #e8e8e8);
+}
+
+.contact-container{
+  padding: 2% 7%;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+
+}
+
+.contact-heading{
+  font-size: 2.5rem;
+  color: #cc9543;
+}
+
+.contact-text{
+  padding-bottom: 25px;
+}
+
+#copyRight{
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------- */
+
+.lesson-content p {
+    margin-bottom: 30px;
+    line-height: 1.9;
+    color: #4a4a4a;
+    word-break: break-word;
+    text-align: center;
+}
+
+.container-fluid h3,p{
+  text-align: left;
+
+}
+
+.lesson-content{
+  padding: 0% 20%;
+}
+
+.basicContent{
+  padding: 0% 18%;
+  text-align: center;
+}
+
+#listItems{
+  text-align:left;
+}
+
+.lesson-content__panel{
+  background-color: light-blue;
+}
