@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <center>
+    <h1 id="start">Get started</h1>
+    <span>Player </span><span id="userScore">0</span>:<span id="computerScore">0</span><span> Computer</span> <br><br>
+    <button id="rock" onclick="g()">rock</button>
+    <button id="paper" onclick="g()">paper</button>
+    <button id="scissors" onclick="g()">scissors</button>
+  </center>
+
+
+  <center>
+    <p id="winner" style="font-size:50px;"></p>
+  </center>
+  <script>
+    function g() {
+      var a = Math.floor(Math.random() * 3) + 1;
+      var value;
+      switch (a) {
+        case 1:
+          value = "rock";
+          break;
+        case 2:
+          value = "paper";
+          break;
+        case 3:
+          value = "scissors";
+          break;
+        default:
+      }
+      return value;
+    }
+
+    document.getElementById('rock').onclick = h;
+    document.getElementById('paper').onclick = h;
+    document.getElementById('scissors').onclick = h;
+
+    function h(clicked) {
+      game(this.id);
+    }
+
+    var playerScore = 0;
+    var computerScore = 0;
+
+    function game(playerChoice) {
+      var computerChoice = g();
+      if (playerChoice === computerChoice) {
+        document.getElementById("start").innerHTML = "Draw!"
+      } else if ((playerChoice == "rock") && (computerChoice == "scissors")) {
+        document.getElementById("start").innerHTML = "Player's ROCK breaks Computer's SCISSORS!";
+        playerScore++;
+      } else if ((playerChoice == "paper") && (computerChoice == "rock")) {
+        document.getElementById("start").innerHTML = "Player's PAPER covers Computer's ROCK!";
+        playerScore++;
+      } else if ((playerChoice == "scissors") && (computerChoice == "paper")) {
+        document.getElementById("start").innerHTML = "Player's SCISSORS cuts Computer's PAPER!";
+        playerScore++;
+      } else if ((playerChoice == "paper") && (computerChoice == "scissors")) {
+        document.getElementById("start").innerHTML = "Computer's's SCISSORS cuts Player's PAPER!";
+        computerScore++;
+      } else if ((playerChoice == "scissors") && (computerChoice == "rock")) {
+        document.getElementById("start").innerHTML = "Computer's ROCK breaks Player's SCISSORS!";
+        computerScore++;
+      } else if ((playerChoice == "rock") && (computerChoice == "paper")) {
+        document.getElementById("start").innerHTML = "Computer's PAPER covers Player's ROCK!";
+        computerScore++;
+      }
+      document.getElementById("userScore").innerHTML = playerScore;
+      document.getElementById("computerScore").innerHTML = computerScore;
+      if (playerScore === 10 || computerScore === 10) {
+        document.getElementById("userScore").innerHTML = playerScore=0;
+        document.getElementById("computerScore").innerHTML = computerScore=0;
+      }
+    }
+  </script>
+</body>
+
+</html>

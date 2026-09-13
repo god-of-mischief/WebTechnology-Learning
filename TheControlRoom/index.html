@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Needs Love?</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111827;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:500px;
+    background:#1f2937;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+#result{
+    margin:25px 0;
+    min-height:120px;
+}
+
+.area{
+    font-size:2rem;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.days{
+    color:#cbd5e1;
+}
+
+button{
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    margin:5px;
+    font-size:1rem;
+}
+
+.primary{
+    background:#ec4899;
+    color:white;
+}
+
+.secondary{
+    background:#374151;
+    color:white;
+}
+
+.add-section{
+    margin-top:25px;
+    display:flex;
+    gap:10px;
+}
+
+input{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+}
+
+.list{
+    margin-top:20px;
+    text-align:left;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ What Needs Love?</h1>
+
+<button class="primary" onclick="findLove()">
+What Needs Love Today?
+</button>
+
+<div id="result">
+<p>Press the button above.</p>
+</div>
+
+<div class="add-section">
+<input id="areaInput" placeholder="Add an area...">
+<button class="secondary" onclick="addArea()">Add</button>
+</div>
+
+<div class="list" id="areasList"></div>
+
+</div>
+
+<script>
+
+const defaultAreas = [
+    "Mails",
+    "@what.the.book",
+    "@projectvyas",
+    "Movie Reviews",
+    "@gamer.s.a.g.a",
+    "Coding",
+    "Learning",
+    "Personal Life"
+];
+
+function loadAreas(){
+    let areas = JSON.parse(localStorage.getItem("areas"));
+
+    if(!areas){
+        areas = defaultAreas.map(name => ({
+            name,
+            lastLoved: new Date().toISOString()
+        }));
+
+        localStorage.setItem("areas", JSON.stringify(areas));
+    }
+
+    return areas;
+}
+
+function saveAreas(areas){
+    localStorage.setItem("areas", JSON.stringify(areas));
+}
+
+function renderAreas(){
+    const areas = loadAreas();
+    const list = document.getElementById("areasList");
+
+    list.innerHTML = "";
+
+    areas.forEach(area=>{
+        const div = document.createElement("div");
+        div.className="item";
+        div.innerHTML=`
+            <span>${area.name}</span>
+            <span>${timeSince(area.lastLoved)}</span>
+        `;
+        list.appendChild(div);
+    });
+}
+
+function timeSince(date){
+
+    const now = new Date();
+    const past = new Date(date);
+
+    const diff = now - past;
+
+    const minutes = Math.floor(diff / (1000 * 60));
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    if(minutes < 60){
+        return `${minutes} minute(s) ago`;
+    }
+
+    if(hours < 24){
+        return `${hours} hour(s) ago`;
+    }
+
+    return `${days} day(s) ${hours % 24} hour(s) ago`;
+}
+
+function findLove(){
+
+    const areas = loadAreas();
+
+    let chosen = areas[0];
+    let highestScore = 0;
+
+    areas.forEach(area => {
+
+        const score =
+            Date.now() -
+            new Date(area.lastLoved).getTime();
+
+        if(score > highestScore){
+            highestScore = score;
+            chosen = area;
+        }
+    });
+
+    document.getElementById("result").innerHTML = `
+        <div class="area">❤️ ${chosen.name}</div>
+        <div class="days">
+            Last loved ${timeSince(chosen.lastLoved)}
+        </div>
+        <br>
+        <p>It misses you.</p>
+        <br>
+        <button class="primary"
+            onclick="showLove('${chosen.name}')">
+            Showed Love ❤️
+        </button>
+    `;
+}
+
+function showLove(name){
+
+    const areas = loadAreas();
+
+    const updated = areas.map(area=>{
+
+        if(area.name === name){
+            area.lastLoved = new Date().toISOString();
+        }
+
+        return area;
+    });
+
+    saveAreas(updated);
+
+    document.getElementById("result").innerHTML=`
+        <div class="area">❤️ Thank You</div>
+        <p>${name} received love today.</p>
+    `;
+
+    renderAreas();
+}
+
+function addArea(){
+
+    const input = document.getElementById("areaInput");
+
+    const name = input.value.trim();
+
+    if(!name) return;
+
+    const areas = loadAreas();
+
+    areas.push({
+        name,
+        lastLoved:new Date().toISOString()
+    });
+
+    saveAreas(areas);
+
+    input.value="";
+
+    renderAreas();
+}
+
+renderAreas();
+
+</script>
+
+</body>
+</html>

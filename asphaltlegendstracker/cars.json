@@ -1,0 +1,34 @@
+[
+  {
+    "id": "lancer-evolution",
+    "name": "LANCER EVOLUTION",
+    "brand": "MITSUBISHI",
+    "class": "D",
+    "stats": [
+      {
+        "rank": 1031,
+        "level": 2,
+        "top_speed_kmh": 262.4,
+        "acceleration": 50.21,
+        "handling": 50.93,
+        "nitro": 63.1
+      }
+    ]
+  },
+  {
+    "id": "mitsubishi-lancer-evolution-x",
+    "name": "Mitsubishi Lancer Evolution X",
+    "brand": "Mitsubishi",
+    "class": "D",
+    "stats": [
+      {
+        "rank": 1300,
+        "level": 1,
+        "top_speed_kmh": 290,
+        "acceleration": 72,
+        "handling": 68,
+        "nitro": 62
+      }
+    ]
+  }
+]

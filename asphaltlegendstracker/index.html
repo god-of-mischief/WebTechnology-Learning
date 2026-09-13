@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asphalt Legends Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Asphalt Legends Tracker</h1>
+    <nav>
+      <a href="index.html">Browse Cars</a>
+      <a href="add.html">Add Car / Stat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>All Cars</h2>
+      <p>Click column headers to sort. Each row is one car at a specific rank & level.</p>
+
+      <table id="cars-table">
+        <thead>
+          <tr>
+            <th data-sort="level">Star Level</th>
+            <th data-sort="rank">Rank</th>
+            <th data-sort="class">Class</th>
+            <th data-sort="top_speed_kmh">Top Speed (km/h)</th>
+            <th data-sort="acceleration">Acceleration</th>
+            <th data-sort="handling">Handling</th>
+            <th data-sort="nitro">Nitro</th>
+            <th>Car</th>
+          </tr>
+        </thead>
+        <tbody id="cars-body">
+          <!-- Rows will be added here by JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

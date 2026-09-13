@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Roulette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Study Roulette</p>
+        <h1>Turn indecision into a game.</h1>
+        <p class="sub">Add your books and chapters, then let the wheel choose what you study next.</p>
+      </div>
+      <button id="pickBtn" class="pick-btn">Pick for me</button>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="card form-card">
+      <h2>Add a book</h2>
+      <form id="bookForm">
+        <input id="bookTitle" placeholder="Book title" required />
+        <textarea id="chapterInput" placeholder="One chapter per line"></textarea>
+        <button type="submit">Save book</button>
+      </form>
+    </section>
+
+    <section class="library">
+      <div class="library-head">
+        <h2>Your shelf</h2>
+        <p>Manage books and chapters.</p>
+      </div>
+      <div id="books" class="books"></div>
+    </section>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="reel card">
+        <p class="eyebrow">Spinning...</p>
+        <div id="reelText" class="reel-text"></div>
+      </div>
+    </div>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

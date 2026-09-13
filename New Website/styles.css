@@ -1,0 +1,197 @@
+body{
+    background-color: black;
+    color: yellow;
+    font-family: 'Rock Salt', cursive;
+}
+
+.earth {
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.moon {
+    z-index: -1;
+    animation: spin 30s linear infinite;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    transform-origin: 200px 200px;
+}
+
+.earth img, .moon img {
+    animation: show-on-load 1s .5s cubic-bezier(0,1.6,.6,1) forwards;
+    border-radius: 50%;
+    opacity: 0;
+    width: 100%;
+    box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+}
+
+.moon img {
+  animation: fade-in 2s 1s cubic-bezier(0,1.5,1,1) forwards, spin 30s linear reverse infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes show-on-load {
+  0% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.title{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    top: 5%;
+    left: 20%;
+}
+
+.p1, .p2, .p3{
+    font-size: 9vw;
+}
+
+.p1{
+    font-size:4vw;
+}
+
+.text-center{
+    padding-top: 630px;
+}
+
+.text-center-img{
+    width: 55px;
+    height: 55px;
+}
+
+.text-center-img:hover{
+    width: 57px;
+    height: 57px;
+    box-shadow: 9px 9px 8px 0px rgb(160, 190, 235,0.5);
+    transform: rotateZ(360deg);
+    transition: 1s;
+}
+
+/* .astronaut{
+    position: absolute;
+    left: -15%;
+    z-index: -2;
+    width: 600px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.astronaut2:hover{
+    background-image:url("images/BB-8.svg");
+}
+
+@keyframes move {
+    0% {
+        top: 2%;
+    }
+    50% {
+        top: 5%;
+    }
+    100% {
+        top: 2%;
+    }
+}
+
+.astronaut2{
+    position: absolute;
+    z-index: 2;
+    width: 450px;
+    left: 3%;
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move2 {
+    0% {
+        top: 39%;
+    }
+    50% {
+        top: 41%;
+    }
+    100% {
+        top: 39%;
+    }
+}
+
+.droid-bb8{
+    position: absolute;
+    z-index: 2;
+    width: 9vw;
+    animation-name: move3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    right: 30%;
+}
+
+.droid-bb8:hover{
+    transform: rotateZ(360deg);
+    transition:2s;
+}
+
+@keyframes move3{
+    0%{
+        top: 8%;
+    }
+    50%{
+        top: 10%;
+    }
+    100%{
+        top: 8%;
+    }
+}
+
+.droid-bb8-2{
+    position: absolute;
+    z-index: 2;
+    width: 5vw;
+    animation-name: move4;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    right: 10%;
+    transform: rotateZ(-20deg);
+}
+
+.droid-bb8-2:hover{
+    transform: rotateZ(340deg);
+    transition:2s;
+}
+
+@keyframes move4{
+    0%{
+        top: 45%;
+    }
+    50%{
+        top: 47%;
+        right: 8%;
+    }
+    100%{
+        top: 45%;
+    }
+} */

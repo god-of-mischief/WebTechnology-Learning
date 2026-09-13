@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBPay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7c38e880ad.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <style>
+    #title{
+        background-color: #ff4c68;
+        color: #fff;
+    }
+
+    .container-fluid{
+        padding: 3% 15% 7%;
+    }
+
+    body{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }       
+
+    .navbar-brand{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .navbar{
+        padding: 0 0 4.5rem;
+    }
+
+    .nav-item{
+        padding: 0 18px;
+    }
+
+    .nav-link{
+        font-size: 1.2rem;
+    }
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+
+    /* Full-width input fields */
+    input[type=text], input[type=password], input[type=number] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }   
+
+    /* Add a background color when the inputs get focus */
+    input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    .signupbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    button:hover {
+        opacity:1;
+    }
+
+    .signupbtn {
+        width: 100%;
+    }
+
+    .otp-button{
+        background-color: darkgray;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        color:black;
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 60%; /* Could be more or less, depending on screen size */
+        text-align: left;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    </style>
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <section id="title">
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+    
+            <nav class="navbar  navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html"><i class="fab fa-amazon-pay"></i> Microservices-Payments</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <form class="modal-content" action="./Customers" method="post">
+                <div class="container">
+                  
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <label><b>TargetAccountNumber</b></label>
+                            <input type="text" placeholder="Enter Target Account Number" name="tan">
+
+                            <label><b>Generate OTP</b></label>
+                            <div class="clearfix">
+                                <button type="submit" class="otp-button">Click-me to Generate</button>
+                            </div>
+
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">    
+                            <label for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Enter Name" name="cname" required>
+
+                            <label><b>SourceAccountNumber</b></label>
+                            <input type="text" placeholder="Enter Source Account Number" name="san">
+                            
+                            <label><b>Amount</b></label>
+                            <input type="number" placeholder="Enter Amount" name="amt">
+                            
+                            <label><b>Enter OTP</b></label>
+                            <input type="text" placeholder="Enter OTP" name="otp">
+
+
+                        </div>
+                    </div>
+                    <label for="Country"><b>Country</b></label>
+                    <select name="Country" id="country">
+                        <option value="USA">USA</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Brazil">Brazil</option>
+                      </select>
+                    
+                    <div class="clearfix">
+                      <button type="submit" class="signupbtn">Submit</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

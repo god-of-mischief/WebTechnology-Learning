@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7c38e880ad.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat-Bold', sans-serif;
+        }
+        p{
+            color:#8f8f8f;
+        }
+        .gfg { 
+            font-size:40px; 
+            color:black;
+            font-weight:bold;
+            text-align:center;
+            line-height: 2;
+        } 
+        .geeks { 
+            color: white;
+            font-size:17px; 
+            text-align:center;
+            margin-bottom:20px; 
+            line-height: 2;
+        }
+        .container-fluid{
+            padding: 3% 15% 1%;
+            background-color: #ff4c68;
+        }
+        .navbar-brand{
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .navbar{
+            padding: 0 0 4.5rem;
+        }
+        .nav-item{
+            padding: 0 18px;
+        }
+        .nav-link{
+            font-size: 1.2rem;
+        }
+        .price-text{
+            font-size: 3rem;
+            line-height: 1.5;
+            color: black;
+        }
+        .pricing-column{
+            padding: 3% 2%;
+        }
+        .card-header{
+            background-color: #fff;
+            color: black;
+        }
+        .row{
+            padding-top: 7%;
+            padding-bottom: 8%;
+        }
+    </style>
+</head>
+<body>
+    <section id="title">
+        <div class="container-fluid">
+          
+            <!-- Nav Bar -->
+    
+            <nav class="navbar  navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html"><i class="fab fa-amazon-pay"></i> Microservices-Payments</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class = "gfg">Make a Payment</div> 
+            <div class = "geeks">Online transactions are very easy and it can be done from anywhere using devices like SmartPhones, Laptops etc. Which are easily available to all of us</div> 
+    
+            <!-- Payment section -->
+
+            <div class="row">
+                <div class="pricing-column col-lg-4 col-md-6">
+                  <div class="card">
+                        <div class="card-header">
+                            <h3>Payments</h3>
+                        </div>
+                        <div class="card-body">
+                            
+                            <a href="pay.html"><button type="button" class="btn btn-lg btn-block btn-outline-dark">Pay</button></a>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="pricing-column col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Current Balance</h3>
+                        </div>
+                        <div class="card-body">
+                           
+                            <button type="button" class="btn btn-lg btn-block btn-dark">Check Balance</button>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="pricing-column col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Add money</h3>
+                        </div>
+                        <div class="card-body">
+                           
+                            <button type="button" class="btn btn-lg btn-block btn-dark">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+</body>
+</html>
