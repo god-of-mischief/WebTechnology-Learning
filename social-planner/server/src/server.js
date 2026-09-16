@@ -5,6 +5,8 @@ import { connectDatabase } from "./db.js";
 import accountsRouter from "./routes/accounts.js";
 import contentRouter from "./routes/content.js";
 
+import { connectDatabase, getDatabase } from "./db.js";
+
 dotenv.config();
 
 const app = express();
@@ -31,3 +33,29 @@ connectDatabase()
     console.error("Database connection failed:", error);
     process.exit(1);
   });
+
+  //temp
+  app.get("/api/debug/database", async (req, res) => {
+  try {
+    const database = getDatabase();
+
+    const collections = await database
+      .listCollections()
+      .toArray();
+
+    const accountCount = await database
+      .collection("accounts")
+      .countDocuments();
+
+    res.json({
+      databaseName: database.databaseName,
+      collections: collections.map((collection) => collection.name),
+      accountCount
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Database diagnostic failed",
+      error: error.message
+    });
+  }
+});
