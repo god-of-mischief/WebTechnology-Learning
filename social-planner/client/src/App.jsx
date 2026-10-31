@@ -17,6 +17,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/accounts/new" element={<AccountPage />} />
           <Route path="/accounts/:accountId" element={<AccountPage />} />
           <Route path="/content/new" element={<ContentEditorPage />} />
           <Route path="/content/:contentId/edit" element={<ContentEditorPage />} />

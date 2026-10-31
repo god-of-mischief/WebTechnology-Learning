@@ -6,9 +6,7 @@ export default function Sidebar() {
   const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
-    getAccounts()
-      .then(setAccounts)
-      .catch(console.error);
+    getAccounts().then(setAccounts).catch(console.error);
   }, []);
 
   return (
@@ -24,7 +22,9 @@ export default function Sidebar() {
           <li className="nav-item">
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Dashboard
             </NavLink>
@@ -32,7 +32,9 @@ export default function Sidebar() {
           <li className="nav-item">
             <NavLink
               to="/all-content"
-              className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               All Content
             </NavLink>
@@ -40,7 +42,9 @@ export default function Sidebar() {
           <li className="nav-item">
             <NavLink
               to="/calendar"
-              className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Calendar
             </NavLink>
@@ -64,14 +68,19 @@ export default function Sidebar() {
                     className="account-color"
                     style={{ backgroundColor: account.color }}
                   />
-                  <span className="account-name">
-                    {account.name}
-                  </span>
+                  <span className="account-name">{account.name}</span>
                 </span>
               </NavLink>
             </li>
           ))}
         </ul>
+        <NavLink
+          to="/accounts/new"
+          className="nav-link"
+          style={{ marginTop: "8px" }}
+        >
+          + Add Account
+        </NavLink>
       </nav>
     </aside>
   );

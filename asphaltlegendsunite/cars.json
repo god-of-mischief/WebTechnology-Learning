@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "c2ycpcp4r",
+    "cls": "D",
+    "brand": "DODGE",
+    "model": "CHALLENGER 392 HEMI SCAT PACK",
+    "owned": true,
+    "stars": 2,
+    "rank": 1004,
+    "topSpeed": 284.8,
+    "accel": 63.35,
+    "handling": 36.49,
+    "nitro": 51.35,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "c0sujadg2",
+    "cls": "D",
+    "brand": "PORSCHE",
+    "model": "911 CARRERA RS 3.8",
+    "owned": true,
+    "stars": 1,
+    "rank": 971,
+    "topSpeed": 276.1,
+    "accel": 58.88,
+    "handling": 44.45,
+    "nitro": 17.07,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "cj93rvzdp",
+    "cls": "D",
+    "brand": "LOTUS",
+    "model": "ELISE SPRINT 220",
+    "owned": false,
+    "stars": 3,
+    "rank": 1942,
+    "topSpeed": 261.7,
+    "accel": 75.96,
+    "handling": 75.56,
+    "nitro": 66.93,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    }
+  },
+  {
+    "id": "czo8y8az8",
+    "cls": "C",
+    "brand": "DODGE",
+    "model": "CHALLENGER SRT8",
+    "owned": true,
+    "stars": 2,
+    "rank": 1335,
+    "topSpeed": 301.9,
+    "accel": 68.77,
+    "handling": 34.53,
+    "nitro": 37.15,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "cqqxoll2z",
+    "cls": "D",
+    "brand": "DS AUTOMOBILES",
+    "model": "DS E-TENSE",
+    "owned": true,
+    "stars": 2,
+    "rank": 1553,
+    "topSpeed": 262.9,
+    "accel": 70.13,
+    "handling": 68.3,
+    "nitro": 64.87,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "csdhyhcwt",
+    "cls": "C",
+    "brand": "CHEVROLET",
+    "model": "CAMARO ZL1 50TH EDITION",
+    "owned": false,
+    "stars": 2,
+    "rank": 1682,
+    "topSpeed": 264.8,
+    "accel": 73.7,
+    "handling": 75.77,
+    "nitro": 66.16,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    }
+  },
+  {
+    "id": "cbbq61qw4",
+    "cls": "D",
+    "brand": "CHEVROLET",
+    "model": "CAMARO LT",
+    "owned": true,
+    "stars": 2,
+    "rank": 1238,
+    "topSpeed": 278.1,
+    "accel": 60.63,
+    "handling": 46.13,
+    "nitro": 58.68,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "c9f3nanuw",
+    "cls": "D",
+    "brand": "BMW",
+    "model": "Z4 LCI E89",
+    "owned": true,
+    "stars": 2,
+    "rank": 889,
+    "topSpeed": 256.4,
+    "accel": 62.58,
+    "handling": 42.27,
+    "nitro": 49.9,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "cmturubgu",
+    "cls": "D",
+    "brand": "NISSAN",
+    "model": "370Z NISMO",
+    "owned": true,
+    "stars": 2,
+    "rank": 620,
+    "topSpeed": 250,
+    "accel": 53.2,
+    "handling": 52.37,
+    "nitro": 41.85,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "id": "c1idt9y99",
+    "cls": "D",
+    "brand": "MITSUBISHI",
+    "model": "LANCER EVOLUTION",
+    "owned": true,
+    "stars": 3,
+    "rank": 1031,
+    "topSpeed": 262.4,
+    "accel": 50.21,
+    "handling": 50.93,
+    "nitro": 63.1,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    }
+  },
+  {
+    "cls": "C",
+    "brand": "BMW",
+    "model": "3.0 CSL HOMMAGE",
+    "stars": 2,
+    "rank": 1181,
+    "topSpeed": 285.7,
+    "accel": 66.21,
+    "handling": 45.87,
+    "nitro": 43.56,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cm7gdo4y1"
+  },
+  {
+    "cls": "S",
+    "brand": "super",
+    "model": "superoo",
+    "stars": 6,
+    "rank": 1999,
+    "topSpeed": 300,
+    "accel": 56.9,
+    "handling": 67.9,
+    "nitro": 77,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cmvypr8ov"
+  },
+  {
+    "cls": "C",
+    "brand": "LOTUS",
+    "model": "EVORA SPORT 410",
+    "stars": 1,
+    "rank": 1086,
+    "topSpeed": 300,
+    "accel": 62.2,
+    "handling": 44.09,
+    "nitro": 36.32,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c9pkal0pr"
+  },
+  {
+    "cls": "D",
+    "brand": "RENAULT",
+    "model": "TreZor",
+    "stars": 3,
+    "rank": 2296,
+    "topSpeed": 291.2,
+    "accel": 74.57,
+    "handling": 56.42,
+    "nitro": 56.56,
+    "owned": false,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    },
+    "id": "ch0dikm5a"
+  },
+  {
+    "cls": "D",
+    "brand": "MAZDA",
+    "model": "RX-7 SPIRIT R",
+    "stars": 1,
+    "rank": 1363,
+    "topSpeed": 291,
+    "accel": 63.85,
+    "handling": 41.28,
+    "nitro": 19.34,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c8t0rwtbm"
+  },
+  {
+    "cls": "D",
+    "brand": "BENTLEY",
+    "model": "CONTINENTAL GT3",
+    "stars": 1,
+    "rank": 1390,
+    "topSpeed": 287.5,
+    "accel": 67.21,
+    "handling": 50.13,
+    "nitro": 30.36,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c1gvbqe0g"
+  },
+  {
+    "cls": "D",
+    "brand": "FORD",
+    "model": "MUSTANG MACH-E1400",
+    "stars": 4,
+    "rank": 2561,
+    "topSpeed": 296.2,
+    "accel": 80.87,
+    "handling": 48.35,
+    "nitro": 52.25,
+    "owned": false,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    },
+    "id": "c448fw55k"
+  },
+  {
+    "cls": "D",
+    "brand": "TOYOTA",
+    "model": "GR SUPRA RACING CONCEPT",
+    "stars": 4,
+    "rank": 2022,
+    "topSpeed": 303.8,
+    "accel": 66.77,
+    "handling": 49.98,
+    "nitro": 38.78,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "ctb24fmx4"
+  },
+  {
+    "cls": "C",
+    "brand": "FORD",
+    "model": "SHELBY GR-1",
+    "stars": 3,
+    "rank": 2613,
+    "topSpeed": 318,
+    "accel": 72.93,
+    "handling": 65.49,
+    "nitro": 61.9,
+    "owned": false,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cr8j3a0ni"
+  },
+  {
+    "cls": "C",
+    "brand": "PININFARINA",
+    "model": "H2 SPEED",
+    "stars": 1,
+    "rank": 1685,
+    "topSpeed": 300,
+    "accel": 69.4,
+    "handling": 57.8,
+    "nitro": 39.06,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cbedu00c0"
+  },
+  {
+    "cls": "C",
+    "brand": "MERCEDES-BENZ",
+    "model": "CLK-GTR",
+    "stars": 4,
+    "rank": 3079,
+    "topSpeed": 328.2,
+    "accel": 75.13,
+    "handling": 62.35,
+    "nitro": 50.57,
+    "owned": false,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cx2vz9zqc"
+  },
+  {
+    "cls": "B",
+    "brand": "BMW",
+    "model": "M4 GT3",
+    "stars": 1,
+    "rank": 2146,
+    "topSpeed": 322.6,
+    "accel": 71.27,
+    "handling": 46.87,
+    "nitro": 55.21,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c8hl7wxkd"
+  },
+  {
+    "cls": "C",
+    "brand": "PORSCHE",
+    "model": "MISSION R",
+    "stars": 1,
+    "rank": 1817,
+    "topSpeed": 300,
+    "accel": 77.5,
+    "handling": 37.23,
+    "nitro": 38.14,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cwuu5oqas"
+  },
+  {
+    "cls": "B",
+    "brand": "DRAKO",
+    "model": "GTE",
+    "stars": 3,
+    "rank": 3067,
+    "topSpeed": 342.1,
+    "accel": 79.62,
+    "handling": 45.44,
+    "nitro": 57.63,
+    "owned": false,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    },
+    "id": "ct2iw6zap"
+  },
+  {
+    "cls": "C",
+    "brand": "DE TOMASO",
+    "model": "P900",
+    "stars": 2,
+    "rank": 1953,
+    "topSpeed": 320.8,
+    "accel": 75.15,
+    "handling": 40.11,
+    "nitro": 26.48,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "ce4g1npbf"
+  },
+  {
+    "cls": "C",
+    "brand": "ART MACHINES by Jannarelly",
+    "model": "AELLA-60",
+    "stars": 1,
+    "rank": 2233,
+    "topSpeed": 311.6,
+    "accel": 70.59,
+    "handling": 45.89,
+    "nitro": 46.01,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cvptwk0p9"
+  },
+  {
+    "cls": "B",
+    "brand": "ITALDESIGN",
+    "model": "ZEROUNO",
+    "stars": 3,
+    "rank": 2911,
+    "topSpeed": 338,
+    "accel": 77.21,
+    "handling": 55.52,
+    "nitro": 49.71,
+    "owned": false,
+    "events": {
+      "summer": true,
+      "turbo": false,
+      "team": false
+    },
+    "id": "chzr0plvr"
+  },
+  {
+    "cls": "B",
+    "brand": "GLICKENHAUS",
+    "model": "003S",
+    "stars": 1,
+    "rank": 2451,
+    "topSpeed": 353.5,
+    "accel": 74.18,
+    "handling": 33.49,
+    "nitro": 52.98,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "ci2etsse6"
+  },
+  {
+    "cls": "C",
+    "brand": "NISSAN",
+    "model": "Z GT4",
+    "stars": 1,
+    "rank": 2583,
+    "topSpeed": 336.3,
+    "accel": 74.04,
+    "handling": 37.49,
+    "nitro": 42.14,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cmoc1bnpe"
+  },
+  {
+    "cls": "C",
+    "brand": "TVR",
+    "model": "SAGARIS",
+    "stars": 4,
+    "rank": 3046,
+    "topSpeed": 312.8,
+    "accel": 75.52,
+    "handling": 69.34,
+    "nitro": 78.28,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "citjs762v"
+  },
+  {
+    "cls": "C",
+    "brand": "FERRARI",
+    "model": "599XX EVO",
+    "stars": 5,
+    "rank": 3843,
+    "topSpeed": 322,
+    "accel": 80.98,
+    "handling": 83.65,
+    "nitro": 70.81,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cl0m3g5jp"
+  },
+  {
+    "cls": "B",
+    "brand": "FERRARI",
+    "model": "ENZO FERRARI",
+    "stars": 5,
+    "rank": 4009,
+    "topSpeed": 364.8,
+    "accel": 75.29,
+    "handling": 64.95,
+    "nitro": 72.26,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "c10izh26b"
+  },
+  {
+    "cls": "B",
+    "brand": "APOLLO",
+    "model": "N",
+    "stars": 5,
+    "rank": 4047,
+    "topSpeed": 374.1,
+    "accel": 80.32,
+    "handling": 58.13,
+    "nitro": 60.57,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cvut09ai8"
+  },
+  {
+    "cls": "B",
+    "brand": "PORSCHE",
+    "model": "CARRERA GT",
+    "stars": 1,
+    "rank": 2728,
+    "topSpeed": 332.7,
+    "accel": 69.78,
+    "handling": 64.68,
+    "nitro": 63.65,
+    "owned": true,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c9dneb198"
+  },
+  {
+    "cls": "A",
+    "brand": "PEUGEOT",
+    "model": "ONYX",
+    "stars": 6,
+    "rank": 4145,
+    "topSpeed": 370.6,
+    "accel": 81.93,
+    "handling": 84.82,
+    "nitro": 59.61,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "c1z6t18rb"
+  },
+  {
+    "cls": "A",
+    "brand": "TOYOTA",
+    "model": "GT-One Road Version(TS020)",
+    "stars": 6,
+    "rank": 4404,
+    "topSpeed": 385,
+    "accel": 78.45,
+    "handling": 71.91,
+    "nitro": 69.55,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "c0u3j5855"
+  },
+  {
+    "cls": "A",
+    "brand": "NOBLE",
+    "model": "M600 SPEEDSTER",
+    "stars": 6,
+    "rank": 4464,
+    "topSpeed": 375.7,
+    "accel": 81.03,
+    "handling": 85.47,
+    "nitro": 61.71,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "c39ckx3v4"
+  },
+  {
+    "cls": "A",
+    "brand": "FERRARI",
+    "model": "499P MODIFICATA",
+    "stars": 6,
+    "rank": 4572,
+    "topSpeed": 358.6,
+    "accel": 84.54,
+    "handling": 85.32,
+    "nitro": 77.85,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": true
+    },
+    "id": "cbfy91o2g"
+  },
+  {
+    "cls": "S",
+    "brand": "RAESR",
+    "model": "TACHYON SPEED",
+    "stars": 6,
+    "rank": 4109,
+    "topSpeed": 400.3,
+    "accel": 77.91,
+    "handling": 53.44,
+    "nitro": 59.94,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cwqv9pnn2"
+  },
+  {
+    "cls": "S",
+    "brand": "ASTON MARTIN",
+    "model": "VALKYRIE AMR PRO",
+    "stars": 6,
+    "rank": 4772,
+    "topSpeed": 415.8,
+    "accel": 85.38,
+    "handling": 51.75,
+    "nitro": 51.37,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": false
+    },
+    "id": "cjrv3w1ix"
+  },
+  {
+    "cls": "S",
+    "brand": "FERRARI",
+    "model": "FXX K",
+    "stars": 1,
+    "rank": 2953,
+    "topSpeed": 351.8,
+    "accel": 77.65,
+    "handling": 39.22,
+    "nitro": 66.02,
+    "owned": true,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c0vomg44w"
+  },
+  {
+    "cls": "S",
+    "brand": "RIMAC",
+    "model": "NEVERA",
+    "stars": 2,
+    "rank": 4035,
+    "topSpeed": 414.9,
+    "accel": 83.83,
+    "handling": 44.41,
+    "nitro": 42.97,
+    "owned": true,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cs6rqs5zs"
+  },
+  {
+    "cls": "B",
+    "brand": "ASTON MARTIN",
+    "model": "DBS SUPERLEGGERA",
+    "stars": 4,
+    "rank": 3600,
+    "topSpeed": 350.9,
+    "accel": 76.5,
+    "handling": 65.27,
+    "nitro": 66.26,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": true
+    },
+    "id": "cl5rjsur2"
+  },
+  {
+    "cls": "B",
+    "brand": "LAMBORGHINI",
+    "model": "REVUELTO",
+    "stars": 5,
+    "rank": 3600,
+    "topSpeed": 357.4,
+    "accel": 82.27,
+    "handling": 65.24,
+    "nitro": 39,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": true
+    },
+    "id": "cdnc040l3"
+  },
+  {
+    "cls": "B",
+    "brand": "Ares",
+    "model": "PANTHER",
+    "stars": 5,
+    "rank": 3600,
+    "topSpeed": 363.2,
+    "accel": 80.78,
+    "handling": 60.29,
+    "nitro": 35.92,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": true
+    },
+    "id": "ci4ryx78h"
+  },
+  {
+    "cls": "B",
+    "brand": "FERRARI",
+    "model": "12 CILINDRI",
+    "stars": 5,
+    "rank": 3600,
+    "topSpeed": 347.2,
+    "accel": 81.88,
+    "handling": 61.88,
+    "nitro": 66.79,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": false,
+      "team": true
+    },
+    "id": "cjnesf5ha"
+  },
+  {
+    "cls": "D",
+    "brand": "VOLKSWAGEN",
+    "model": "XL SPORT CONCEPT",
+    "stars": 1,
+    "rank": 706,
+    "topSpeed": 270,
+    "accel": 46.9,
+    "handling": 49.35,
+    "nitro": 42.32,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c15g75ypa"
+  },
+  {
+    "cls": "B",
+    "brand": "PORSCHE",
+    "model": "911 GTS COUPÉ",
+    "stars": 1,
+    "rank": 1243,
+    "topSpeed": 312,
+    "accel": 64.9,
+    "handling": 41.08,
+    "nitro": 42.95,
+    "owned": true,
+    "events": {
+      "summer": true,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cmlpkl7xu"
+  },
+  {
+    "cls": "B",
+    "brand": "MERCEDES-BENZ",
+    "model": "SLR McLAREN",
+    "stars": 2,
+    "rank": 2747,
+    "topSpeed": 340.6,
+    "accel": 71.07,
+    "handling": 51.27,
+    "nitro": 63.23,
+    "owned": true,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cgl1nxwed"
+  },
+  {
+    "cls": "B",
+    "brand": "JAGUAR",
+    "model": "F-TYPE SVR",
+    "stars": 4,
+    "rank": 2500,
+    "topSpeed": 341,
+    "accel": 75.55,
+    "handling": 49.28,
+    "nitro": 50.12,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c5prcyvz4"
+  },
+  {
+    "cls": "D",
+    "brand": "GLICKENHAUS",
+    "model": "004C",
+    "stars": 5,
+    "rank": 3075,
+    "topSpeed": 311.2,
+    "accel": 76.75,
+    "handling": 56.89,
+    "nitro": 60.87,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cniu487qh"
+  },
+  {
+    "cls": "A",
+    "brand": "FERRARI",
+    "model": "LAFERRARI",
+    "stars": 5,
+    "rank": 3445,
+    "topSpeed": 364.6,
+    "accel": 80.23,
+    "handling": 43.06,
+    "nitro": 71.4,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cj330425x"
+  },
+  {
+    "cls": "C",
+    "brand": "BUGATTI",
+    "model": "EB110",
+    "stars": 5,
+    "rank": 3946,
+    "topSpeed": 348.4,
+    "accel": 76.18,
+    "handling": 66.08,
+    "nitro": 58.82,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cy51232ne"
+  },
+  {
+    "cls": "C",
+    "brand": "LAMBORGHINI",
+    "model": "GALLARDO LP 560-4",
+    "stars": 5,
+    "rank": 3997,
+    "topSpeed": 340.7,
+    "accel": 76.56,
+    "handling": 75.81,
+    "nitro": 59.69,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cc7izfsro"
+  },
+  {
+    "cls": "B",
+    "brand": "LAMBORGHINI",
+    "model": "INVENCIBLE",
+    "stars": 5,
+    "rank": 4091,
+    "topSpeed": 340.4,
+    "accel": 88.49,
+    "handling": 75.74,
+    "nitro": 67.64,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cb9vhlhtk"
+  },
+  {
+    "cls": "A",
+    "brand": "PAGANI",
+    "model": "HUAYRA BC",
+    "stars": 6,
+    "rank": 4274,
+    "topSpeed": 365.4,
+    "accel": 80.04,
+    "handling": 63.11,
+    "nitro": 86.75,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cr0cb5n38"
+  },
+  {
+    "cls": "A",
+    "brand": "TECHRULES",
+    "model": "AT96 TRACK VERSION",
+    "stars": 6,
+    "rank": 4444,
+    "topSpeed": 364.6,
+    "accel": 85.53,
+    "handling": 75.74,
+    "nitro": 69.65,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cueesivf7"
+  },
+  {
+    "cls": "S",
+    "brand": "ASPARK",
+    "model": "OWL",
+    "stars": 6,
+    "rank": 4863,
+    "topSpeed": 414.7,
+    "accel": 89.4,
+    "handling": 51.75,
+    "nitro": 51.27,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "cveeved83"
+  },
+  {
+    "cls": "B",
+    "brand": "ZENVO",
+    "model": "TSR-S",
+    "stars": 5,
+    "rank": 4171,
+    "topSpeed": 342.4,
+    "accel": 85.38,
+    "handling": 82.88,
+    "nitro": 67.36,
+    "owned": false,
+    "events": {
+      "summer": false,
+      "turbo": true,
+      "team": false
+    },
+    "id": "c1yp08wve"
+  }
+]

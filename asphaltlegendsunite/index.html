@@ -1,0 +1,1447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pit Wall — Garage &amp; Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #eceef0;
+        --panel: #ffffff;
+        --panel-alt: #f4f5f7;
+        --text: #1a1d22;
+        --muted: #5b6270;
+        --border: #dadde2;
+        --accent: #c97a12;
+        --accent-text: #3a2600;
+        --accent-soft: #f4e3c6;
+        --danger: #b23a4e;
+        --row-hover: #f7f3ec;
+        --cls-d: #7c828c;
+        --cls-c: #2e7fb8;
+        --cls-b: #2e9a5c;
+        --cls-a: #c97a12;
+        --cls-s: #b8203e;
+        --shadow: 0 1px 2px rgba(20, 22, 26, 0.06);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #14161a;
+          --panel: #1c1f25;
+          --panel-alt: #20232a;
+          --text: #e9eaec;
+          --muted: #9298a3;
+          --border: #2b2f37;
+          --accent: #f2a93b;
+          --accent-text: #1a1300;
+          --accent-soft: #3a2c10;
+          --danger: #e0637a;
+          --row-hover: #242830;
+          --cls-d: #9298a3;
+          --cls-c: #5ab1ee;
+          --cls-b: #4fcb7a;
+          --cls-a: #f2a93b;
+          --cls-s: #e85570;
+          --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #14161a;
+        --panel: #1c1f25;
+        --panel-alt: #20232a;
+        --text: #e9eaec;
+        --muted: #9298a3;
+        --border: #2b2f37;
+        --accent: #f2a93b;
+        --accent-text: #1a1300;
+        --accent-soft: #3a2c10;
+        --danger: #e0637a;
+        --row-hover: #242830;
+        --cls-d: #9298a3;
+        --cls-c: #5ab1ee;
+        --cls-b: #4fcb7a;
+        --cls-a: #f2a93b;
+        --cls-s: #e85570;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
+      .heading,
+      .tab,
+      .stat-num,
+      th,
+      .badge,
+      .btn,
+      .modal h2,
+      .brand-mark {
+        font-family: "Rajdhani", system-ui, sans-serif;
+      }
+
+      header {
+        padding: 28px clamp(16px, 4vw, 48px) 0;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .brand-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .brand-mark {
+        font-weight: 700;
+        font-size: clamp(28px, 4vw, 38px);
+        letter-spacing: 0.5px;
+        color: var(--text);
+        margin: 0;
+      }
+      .brand-mark span {
+        color: var(--accent);
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 4px 0 0;
+      }
+      .stats {
+        display: flex;
+        gap: 22px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+      .stat {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 10px 16px;
+        min-width: 96px;
+        box-shadow: var(--shadow);
+      }
+      .stat-num {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 11px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-top: 4px;
+      }
+
+      nav.tabs {
+        max-width: 1280px;
+        margin: 22px auto 0;
+        padding: 0 clamp(16px, 4vw, 48px);
+        display: flex;
+        gap: 4px;
+        border-bottom: 2px solid var(--border);
+        overflow-x: auto;
+      }
+      .tab {
+        appearance: none;
+        background: none;
+        border: none;
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        padding: 10px 16px 12px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -2px;
+        white-space: nowrap;
+      }
+      .tab:hover {
+        color: var(--text);
+      }
+      .tab.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+
+      main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 20px clamp(16px, 4vw, 48px) 60px;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+      }
+      .search {
+        flex: 1;
+        min-width: 160px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 9px 12px;
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+      }
+      .search:focus {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+      }
+      .check-label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+      .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        color: var(--text);
+        padding: 9px 16px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn:hover {
+        background: var(--row-hover);
+      }
+      .btn:focus-visible,
+      .tab:focus-visible,
+      .search:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .btn-primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: var(--accent-text);
+      }
+      .btn-primary:hover {
+        filter: brightness(1.05);
+      }
+      .btn-ghost {
+        background: none;
+        border: none;
+        color: var(--muted);
+        padding: 4px 8px;
+        font-size: 13px;
+        text-decoration: underline;
+      }
+      .btn-ghost:hover {
+        color: var(--text);
+      }
+      .btn-danger-ghost {
+        color: var(--danger);
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 920px;
+      }
+      th {
+        text-align: left;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: var(--muted);
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+        background: var(--panel-alt);
+      }
+      th:hover {
+        color: var(--text);
+      }
+      th.sorted {
+        color: var(--accent);
+      }
+      th .arrow {
+        font-size: 11px;
+        margin-left: 4px;
+        opacity: 0.85;
+      }
+      td {
+        padding: 11px 14px;
+        border-bottom: 1px solid var(--border);
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      tbody tr:hover {
+        background: var(--row-hover);
+      }
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+      td.model-cell {
+        white-space: normal;
+        min-width: 160px;
+      }
+      .model-name {
+        font-weight: 600;
+      }
+      .brand-name {
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      .badge {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 13px;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .badge-d {
+        background: var(--cls-d);
+      }
+      .badge-c {
+        background: var(--cls-c);
+      }
+      .badge-b {
+        background: var(--cls-b);
+      }
+      .badge-a {
+        background: var(--cls-a);
+        color: var(--accent-text);
+      }
+      .badge-s {
+        background: var(--cls-s);
+      }
+
+      .owned-toggle {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: var(--accent);
+      }
+      .stars {
+        color: var(--accent);
+        letter-spacing: 1px;
+        font-size: 13px;
+      }
+      .stars .empty {
+        color: var(--border);
+      }
+      .num {
+        font-variant-numeric: tabular-nums;
+      }
+      .bar-cell {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .bar-track {
+        width: 56px;
+        height: 6px;
+        background: var(--panel-alt);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .bar-fill {
+        height: 100%;
+        background: var(--accent);
+      }
+      .actions-cell {
+        display: flex;
+        gap: 10px;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--muted);
+      }
+      .empty-state h3 {
+        color: var(--text);
+        font-family: "Rajdhani", sans-serif;
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
+
+      /* Modal */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 10, 12, 0.55);
+        display: none;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 40px 16px;
+        overflow-y: auto;
+        z-index: 50;
+      }
+      .modal-overlay.open {
+        display: flex;
+      }
+      .modal {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 520px;
+        padding: 24px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      }
+      .modal h2 {
+        margin: 0 0 4px;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .modal .modal-sub {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0 0 18px;
+      }
+      .field-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .field.full {
+        grid-column: 1/-1;
+      }
+      .field label {
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .field input[type="text"],
+      .field input[type="number"],
+      .field select {
+        background: var(--panel-alt);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 8px 10px;
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+      }
+      .field input:focus,
+      .field select:focus {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+      }
+      .checks-row {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 2px;
+      }
+      .checks-row label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: var(--text);
+        font-weight: 500;
+        text-transform: none;
+      }
+      .modal-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .theme-btn {
+        background: none;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        border-radius: 6px;
+        padding: 7px 10px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      @media (max-width: 640px) {
+        .field-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          gap: 10px;
+        }
+        .stat {
+          min-width: 80px;
+          padding: 8px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand-row">
+        <div>
+          <p class="brand-mark">PIT <span>WALL</span></p>
+          <p class="subtitle">
+            Your garage roster and event line-ups, tracked and sorted your way.
+          </p>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">
+          Night track
+        </button>
+      </div>
+      <div class="stats" id="statsRow"></div>
+    </header>
+
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="garage">Garage</button>
+      <button class="tab" data-tab="summer">Summer Growth</button>
+      <button class="tab" data-tab="turbo">Turbo Squad</button>
+      <button class="tab" data-tab="team">Team Pursuit</button>
+    </nav>
+
+    <main>
+      <div class="toolbar">
+        <input
+          class="search"
+          id="searchInput"
+          type="text"
+          placeholder="Search brand or model…"
+        />
+        <label class="check-label"
+          ><input type="checkbox" id="ownedOnly" /> Owned only</label
+        >
+        <button class="btn" id="importBtn" type="button">
+          Import saved cars
+        </button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden />
+        <button class="btn btn-primary" id="addBtn" type="button">
+          + Add car
+        </button>
+      </div>
+      <div class="table-wrap" id="tableWrap"></div>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <h2 id="modalTitle">Add car</h2>
+        <p class="modal-sub" id="modalSub">
+          Fill in the car's stats. All fields are sortable in the tables.
+        </p>
+        <form id="carForm">
+          <div class="field-grid">
+            <div class="field">
+              <label for="f-class">Class</label>
+              <select id="f-class">
+                <option value="D">D</option>
+                <option value="C">C</option>
+                <option value="B">B</option>
+                <option value="A">A</option>
+                <option value="S">S</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-brand">Brand</label>
+              <input
+                type="text"
+                id="f-brand"
+                required
+                placeholder="e.g. Ferrari"
+              />
+            </div>
+            <div class="field full">
+              <label for="f-model">Model</label>
+              <input
+                type="text"
+                id="f-model"
+                required
+                placeholder="e.g. SF90 Stradale"
+              />
+            </div>
+            <div class="field">
+              <label for="f-stars">Stars (0–6)</label>
+              <input type="number" id="f-stars" min="0" max="6" value="0" />
+            </div>
+            <div class="field">
+              <label for="f-rank">Rank</label>
+              <input type="number" id="f-rank" min="0" value="1" />
+            </div>
+            <div class="field">
+              <label for="f-topspeed">Top speed (km/h)</label>
+              <input type="number" id="f-topspeed" min="0" value="300" step="0.01" />
+            </div>
+            <div class="field">
+              <label for="f-accel">Acceleration (0–100)</label>
+              <input
+                type="number"
+                id="f-accel"
+                min="0"
+                max="100"
+                step="0.01"
+                value="5"
+              />
+            </div>
+            <div class="field">
+              <label for="f-handling">Handling (0–100)</label>
+              <input
+                type="number"
+                id="f-handling"
+                min="0"
+                max="100"
+                step="0.01"
+                value="5"
+              />
+            </div>
+            <div class="field">
+              <label for="f-nitro">Nitro (0–100)</label>
+              <input
+                type="number"
+                id="f-nitro"
+                min="0"
+                max="100"
+                step="0.01"
+                value="5"
+              />
+            </div>
+            <div class="field full">
+              <label>Owned</label>
+              <label
+                style="
+                  flex-direction: row;
+                  text-transform: none;
+                  font-weight: 500;
+                  color: var(--text);
+                "
+                ><input
+                  type="checkbox"
+                  id="f-owned"
+                  style="width: 16px; height: 16px"
+                />
+                I own this car</label
+              >
+            </div>
+            <div class="field full">
+              <label>Available in events</label>
+              <div class="checks-row">
+                <label
+                  ><input type="checkbox" id="f-ev-summer" /> Summer
+                  Growth</label
+                >
+                <label
+                  ><input type="checkbox" id="f-ev-turbo" /> Turbo Flow</label
+                >
+                <label
+                  ><input type="checkbox" id="f-ev-team" /> Team Pursuit</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn" id="cancelBtn">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="saveBtn">
+              Save car
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var STORAGE_KEY = "pitwall-cars-v1";
+        var THEME_KEY = "pitwall-theme";
+
+        var EVENT_DEFS = {
+          summer: { label: "Summer Growth", key: "summer" },
+          turbo: { label: "Turbo Flow", key: "turbo" },
+          team: { label: "Team Pursuit", key: "team" },
+        };
+
+        var COLUMNS = [
+          { key: "cls", label: "Class", type: "class" },
+          { key: "brand", label: "Brand", type: "string" },
+          { key: "model", label: "Model", type: "string" },
+          { key: "owned", label: "Owned", type: "bool" },
+          { key: "stars", label: "Stars", type: "number" },
+          { key: "rank", label: "Rank", type: "number" },
+          { key: "topSpeed", label: "Top speed", type: "number" },
+          { key: "accel", label: "Accel", type: "number" },
+          { key: "handling", label: "Handling", type: "number" },
+          { key: "nitro", label: "Nitro", type: "number" },
+        ];
+
+        var CLASS_ORDER = { D: 0, C: 1, B: 2, A: 3, S: 4 };
+
+        var state = {
+          cars: [],
+          tab: "garage",
+          sortKey: "cls",
+          sortDir: "asc",
+          search: "",
+          ownedOnly: false,
+          editingId: null,
+          modalEventPreset: null,
+        };
+
+        function uid() {
+          return "c" + Math.random().toString(36).slice(2, 10);
+        }
+
+        function seedData() {
+          return [
+            mkCar(
+              "S",
+              "Ferrari",
+              "SF90 Stradale",
+              true,
+              5,
+              10,
+              340,
+              9.2,
+              8.0,
+              8.8,
+              { summer: true, turbo: true, team: false },
+            ),
+            mkCar("S", "Koenigsegg", "Jesko", false, 0, 1, 330, 8.8, 7.6, 9.0, {
+              summer: true,
+              turbo: false,
+              team: true,
+            }),
+            mkCar("S", "McLaren", "Senna", true, 3, 7, 322, 9.0, 8.4, 8.5, {
+              summer: false,
+              turbo: true,
+              team: true,
+            }),
+            mkCar(
+              "A",
+              "Lamborghini",
+              "Huracán STO",
+              true,
+              4,
+              8,
+              310,
+              8.2,
+              7.8,
+              7.6,
+              { summer: true, turbo: true, team: false },
+            ),
+            mkCar(
+              "A",
+              "Porsche",
+              "911 GT2 RS",
+              false,
+              0,
+              1,
+              300,
+              7.9,
+              8.0,
+              7.4,
+              { summer: false, turbo: false, team: true },
+            ),
+            mkCar(
+              "B",
+              "Nissan",
+              "GT-R Nismo",
+              true,
+              6,
+              10,
+              295,
+              7.4,
+              7.2,
+              6.9,
+              { summer: true, turbo: false, team: false },
+            ),
+            mkCar(
+              "B",
+              "Chevrolet",
+              "Corvette Z06",
+              false,
+              0,
+              1,
+              290,
+              7.0,
+              7.0,
+              6.6,
+              { summer: false, turbo: true, team: false },
+            ),
+            mkCar(
+              "C",
+              "Ford",
+              "Mustang Shelby GT500",
+              true,
+              2,
+              5,
+              275,
+              6.4,
+              6.2,
+              5.8,
+              { summer: false, turbo: false, team: false },
+            ),
+            mkCar("C", "Toyota", "Supra", true, 3, 6, 270, 6.2, 6.6, 6.0, {
+              summer: true,
+              turbo: false,
+              team: false,
+            }),
+            mkCar("D", "Volkswagen", "Beetle", true, 1, 3, 190, 3.8, 5.0, 3.2, {
+              summer: false,
+              turbo: false,
+              team: false,
+            }),
+          ];
+        }
+        function mkCar(
+          cls,
+          brand,
+          model,
+          owned,
+          stars,
+          rank,
+          topSpeed,
+          accel,
+          handling,
+          nitro,
+          events,
+        ) {
+          return {
+            id: uid(),
+            cls: cls,
+            brand: brand,
+            model: model,
+            owned: owned,
+            stars: stars,
+            rank: rank,
+            topSpeed: topSpeed,
+            accel: accel,
+            handling: handling,
+            nitro: nitro,
+            events: events,
+          };
+        }
+
+        async function load() {
+          try {
+            var response = await fetch("/api/cars", { cache: "no-store" });
+            if (response.ok) {
+              var cars = await response.json();
+              if (Array.isArray(cars) && cars.length) return cars;
+            }
+          } catch (e) {
+            console.warn("Server load failed; checking browser storage.", e);
+          }
+
+          // Fallback/migration path for the old localStorage version.
+          try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (raw) {
+              var legacy = JSON.parse(raw);
+              if (Array.isArray(legacy) && legacy.length) {
+                try {
+                  await save(legacy);
+                  return legacy;
+                } catch (e) {
+                  console.warn("Could not migrate localStorage automatically.", e);
+                }
+              }
+            }
+          } catch (e) {
+            console.warn("Legacy localStorage data could not be read.", e);
+          }
+
+          return [];
+        }
+
+        async function save(cars) {
+          var response = await fetch("/api/cars", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(cars),
+          });
+          if (!response.ok) throw new Error("Could not save cars to server.");
+        }
+
+        async function persistCars() {
+          try {
+            await save(state.cars);
+            return true;
+          } catch (e) {
+            console.error("Save failed", e);
+            alert("Could not save car data. Is PIT WALL server running?");
+            return false;
+          }
+        }
+
+        async function importCars(cars) {
+          if (!Array.isArray(cars) || !cars.length) {
+            alert("The selected file does not contain a valid car list.");
+            return false;
+          }
+          try {
+            await save(cars);
+            state.cars = cars;
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(cars));
+            } catch (e) {}
+            renderAll();
+            alert("Car data imported successfully. It is now saved in cars.json.");
+            return true;
+          } catch (e) {
+            console.error("Import failed", e);
+            alert("Import failed. Make sure PIT WALL is running through server.js.");
+            return false;
+          }
+        }
+
+        async function importFromFile(file) {
+          try {
+            var text = await file.text();
+            await importCars(JSON.parse(text));
+          } catch (e) {
+            console.error("Invalid import file", e);
+            alert("Could not read that JSON file.");
+          }
+        }
+
+        function loadTheme() {
+          try {
+            return localStorage.getItem(THEME_KEY);
+          } catch (e) {
+            return null;
+          }
+        }
+        function saveTheme(t) {
+          try {
+            localStorage.setItem(THEME_KEY, t);
+          } catch (e) {}
+        }
+
+        // ---------- Rendering ----------
+
+        var tableWrap = document.getElementById("tableWrap");
+        var statsRow = document.getElementById("statsRow");
+        var tabsEl = document.getElementById("tabs");
+        var searchInput = document.getElementById("searchInput");
+        var ownedOnlyEl = document.getElementById("ownedOnly");
+        var addBtn = document.getElementById("addBtn");
+
+        function currentRows() {
+          var rows = state.cars.slice();
+          if (state.tab !== "garage") {
+            rows = rows.filter(function (c) {
+              return c.events && c.events[state.tab];
+            });
+          }
+          if (state.search.trim()) {
+            var q = state.search.trim().toLowerCase();
+            rows = rows.filter(function (c) {
+              return (
+                c.brand.toLowerCase().indexOf(q) !== -1 ||
+                c.model.toLowerCase().indexOf(q) !== -1
+              );
+            });
+          }
+          if (state.ownedOnly) {
+            rows = rows.filter(function (c) {
+              return c.owned;
+            });
+          }
+          rows.sort(function (a, b) {
+            var col = COLUMNS.filter(function (c) {
+              return c.key === state.sortKey;
+            })[0];
+            var av, bv;
+            if (state.sortKey === "cls") {
+              av = CLASS_ORDER[a.cls];
+              bv = CLASS_ORDER[b.cls];
+            } else if (col.type === "string") {
+              av = (a[state.sortKey] || "").toLowerCase();
+              bv = (b[state.sortKey] || "").toLowerCase();
+            } else if (col.type === "bool") {
+              av = a[state.sortKey] ? 1 : 0;
+              bv = b[state.sortKey] ? 1 : 0;
+            } else {
+              av = a[state.sortKey];
+              bv = b[state.sortKey];
+            }
+            var cmp;
+            if (av < bv) cmp = -1;
+            else if (av > bv) cmp = 1;
+            else cmp = 0;
+            return state.sortDir === "asc" ? cmp : -cmp;
+          });
+          return rows;
+        }
+
+        function fmtNum(n, decimals) {
+          if (decimals) return Number(n).toFixed(2);
+          return String(n);
+        }
+
+        function starString(stars) {
+          var full = Math.max(0, Math.min(6, Number(stars) || 0));
+          var out = "";
+          for (var i = 0; i < 6; i++) {
+            out += i < full ? "★" : '<span class="empty">★</span>';
+          }
+          return out;
+        }
+
+        function barCell(value, max) {
+          var pct = Math.max(0, Math.min(100, (value / max) * 100));
+          return (
+            '<div class="bar-cell"><span class="num">' +
+            fmtNum(value, true) +
+            "</span>" +
+            '<div class="bar-track"><div class="bar-fill" style="width:' +
+            pct +
+            '%"></div></div></div>'
+          );
+        }
+
+        function renderStats() {
+          var total = state.cars.length;
+          var owned = state.cars.filter(function (c) {
+            return c.owned;
+          }).length;
+          var sTier = state.cars.filter(function (c) {
+            return c.cls === "S" && c.owned;
+          }).length;
+          var evCount = state.cars.filter(function (c) {
+            return (
+              c.events && (c.events.summer || c.events.turbo || c.events.team)
+            );
+          }).length;
+          statsRow.innerHTML =
+            stat(total, "Cars logged") +
+            stat(owned, "Owned") +
+            stat(sTier, "S-class owned") +
+            stat(evCount, "Entered in events");
+        }
+        function stat(num, label) {
+          return (
+            '<div class="stat"><div class="stat-num">' +
+            num +
+            '</div><div class="stat-label">' +
+            label +
+            "</div></div>"
+          );
+        }
+
+        function renderTable() {
+          var rows = currentRows();
+
+          if (!rows.length) {
+            var msg =
+              state.tab === "garage"
+                ? "No cars match. Try clearing filters, or add your first car."
+                : "No cars entered for " +
+                  EVENT_DEFS[state.tab].label +
+                  " yet.";
+            tableWrap.innerHTML =
+              '<div class="empty-state"><h3>Empty garage bay</h3><p>' +
+              msg +
+              "</p></div>";
+            return;
+          }
+
+          var html = "<table><thead><tr>";
+          COLUMNS.forEach(function (col) {
+            var sorted = state.sortKey === col.key;
+            var arrow = sorted ? (state.sortDir === "asc" ? "▲" : "▼") : "";
+            html +=
+              '<th data-key="' +
+              col.key +
+              '" class="' +
+              (sorted ? "sorted" : "") +
+              '">' +
+              col.label +
+              (arrow ? ' <span class="arrow">' + arrow + "</span>" : "") +
+              "</th>";
+          });
+          html += "<th>Actions</th></tr></thead><tbody>";
+
+          rows.forEach(function (c) {
+            html += '<tr data-id="' + c.id + '">';
+            html +=
+              '<td><span class="badge badge-' +
+              c.cls.toLowerCase() +
+              '">' +
+              c.cls +
+              "</span></td>";
+            html += "<td>" + escapeHtml(c.brand) + "</td>";
+            html +=
+              '<td class="model-cell"><div class="model-name">' +
+              escapeHtml(c.model) +
+              "</div></td>";
+            html +=
+              '<td><input type="checkbox" class="owned-toggle" data-id="' +
+              c.id +
+              '" ' +
+              (c.owned ? "checked" : "") +
+              "></td>";
+            html +=
+              '<td><span class="stars">' + starString(c.stars) + "</span></td>";
+            html += '<td class="num">' + c.rank + "</td>";
+            html += '<td class="num">' + c.topSpeed + " km/h</td>";
+            html += "<td>" + barCell(c.accel, 100) + "</td>";
+            html += "<td>" + barCell(c.handling, 100) + "</td>";
+            html += "<td>" + barCell(c.nitro, 100) + "</td>";
+            html += '<td class="actions-cell">';
+            html +=
+              '<button class="btn-ghost" data-action="edit" data-id="' +
+              c.id +
+              '">Edit</button>';
+            if (state.tab === "garage") {
+              html +=
+                '<button class="btn-ghost btn-danger-ghost" data-action="delete" data-id="' +
+                c.id +
+                '">Delete</button>';
+            } else {
+              html +=
+                '<button class="btn-ghost btn-danger-ghost" data-action="remove-event" data-id="' +
+                c.id +
+                '">Remove from event</button>';
+            }
+            html += "</td></tr>";
+          });
+          html += "</tbody></table>";
+          tableWrap.innerHTML = html;
+        }
+
+        function escapeHtml(s) {
+          return String(s).replace(/[&<>"']/g, function (ch) {
+            return {
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            }[ch];
+          });
+        }
+
+        function renderAll() {
+          renderStats();
+          renderTable();
+        }
+
+        // ---------- Events wiring ----------
+
+        tabsEl.addEventListener("click", function (e) {
+          var btn = e.target.closest(".tab");
+          if (!btn) return;
+          Array.prototype.forEach.call(
+            tabsEl.querySelectorAll(".tab"),
+            function (t) {
+              t.classList.remove("active");
+            },
+          );
+          btn.classList.add("active");
+          state.tab = btn.getAttribute("data-tab");
+          addBtn.textContent =
+            state.tab === "garage" ? "+ Add car" : "+ Add car to event";
+          renderAll();
+        });
+
+        tableWrap.addEventListener("click", function (e) {
+          var toggle = e.target.closest(".owned-toggle");
+          if (toggle) {
+            var id = toggle.getAttribute("data-id");
+            var car = state.cars.filter(function (c) {
+              return c.id === id;
+            })[0];
+            if (car) {
+              car.owned = toggle.checked;
+              save(state.cars);
+              renderStats();
+            }
+            return;
+          }
+          var actionBtn = e.target.closest("[data-action]");
+          if (!actionBtn) return;
+          var action = actionBtn.getAttribute("data-action");
+          var id = actionBtn.getAttribute("data-id");
+          var car = state.cars.filter(function (c) {
+            return c.id === id;
+          })[0];
+          if (!car) return;
+
+          if (action === "edit") {
+            openModal(car);
+          } else if (action === "delete") {
+            if (
+              confirm(
+                'Remove "' +
+                  car.brand +
+                  " " +
+                  car.model +
+                  '" from your garage entirely?',
+              )
+            ) {
+              state.cars = state.cars.filter(function (c) {
+                return c.id !== id;
+              });
+              persistCars().then(function () { renderAll(); });
+            }
+          } else if (action === "remove-event") {
+            car.events[state.tab] = false;
+            persistCars().then(function () { renderAll(); });
+          }
+        });
+
+        tableWrap.addEventListener("click", function (e) {
+          var th = e.target.closest("th[data-key]");
+          if (!th) return;
+          var key = th.getAttribute("data-key");
+          if (state.sortKey === key) {
+            state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+          } else {
+            state.sortKey = key;
+            state.sortDir = "asc";
+          }
+          renderTable();
+        });
+
+        searchInput.addEventListener("input", function () {
+          state.search = searchInput.value;
+          renderTable();
+        });
+        ownedOnlyEl.addEventListener("change", function () {
+          state.ownedOnly = ownedOnlyEl.checked;
+          renderTable();
+        });
+
+        // ---------- Modal ----------
+
+        var overlay = document.getElementById("modalOverlay");
+        var form = document.getElementById("carForm");
+        var modalTitle = document.getElementById("modalTitle");
+        var modalSub = document.getElementById("modalSub");
+
+        var f = {
+          cls: document.getElementById("f-class"),
+          brand: document.getElementById("f-brand"),
+          model: document.getElementById("f-model"),
+          stars: document.getElementById("f-stars"),
+          rank: document.getElementById("f-rank"),
+          topSpeed: document.getElementById("f-topspeed"),
+          accel: document.getElementById("f-accel"),
+          handling: document.getElementById("f-handling"),
+          nitro: document.getElementById("f-nitro"),
+          owned: document.getElementById("f-owned"),
+          evSummer: document.getElementById("f-ev-summer"),
+          evTurbo: document.getElementById("f-ev-turbo"),
+          evTeam: document.getElementById("f-ev-team"),
+        };
+
+        function openModal(car) {
+          state.editingId = car ? car.id : null;
+          if (car) {
+            modalTitle.textContent = "Edit car";
+            modalSub.textContent =
+              "Update this car's stats and event availability.";
+            f.cls.value = car.cls;
+            f.brand.value = car.brand;
+            f.model.value = car.model;
+            f.stars.value = car.stars;
+            f.rank.value = car.rank;
+            f.topSpeed.value = car.topSpeed;
+            f.accel.value = car.accel;
+            f.handling.value = car.handling;
+            f.nitro.value = car.nitro;
+            f.owned.checked = !!car.owned;
+            f.evSummer.checked = !!(car.events && car.events.summer);
+            f.evTurbo.checked = !!(car.events && car.events.turbo);
+            f.evTeam.checked = !!(car.events && car.events.team);
+          } else {
+            modalTitle.textContent =
+              state.tab === "garage"
+                ? "Add car"
+                : "Add car to " + EVENT_DEFS[state.tab].label;
+            modalSub.textContent =
+              "Fill in the car's stats. All fields are sortable in the tables.";
+            form.reset();
+            f.cls.value = "B";
+            f.stars.value = 0;
+            f.rank.value = 1;
+            f.topSpeed.value = 300;
+            f.accel.value = 5;
+            f.handling.value = 5;
+            f.nitro.value = 5;
+            f.owned.checked = false;
+            f.evSummer.checked = state.tab === "summer";
+            f.evTurbo.checked = state.tab === "turbo";
+            f.evTeam.checked = state.tab === "team";
+          }
+          overlay.classList.add("open");
+          f.brand.focus();
+        }
+        function closeModal() {
+          overlay.classList.remove("open");
+          state.editingId = null;
+        }
+
+        addBtn.addEventListener("click", function () {
+          openModal(null);
+        });
+        document
+          .getElementById("cancelBtn")
+          .addEventListener("click", closeModal);
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeModal();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.classList.contains("open"))
+            closeModal();
+        });
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          var data = {
+            cls: f.cls.value,
+            brand: f.brand.value.trim() || "Unknown",
+            model: f.model.value.trim() || "Unnamed",
+            stars: clamp(Number(f.stars.value) || 0, 0, 6),
+            rank: Math.max(0, Number(f.rank.value) || 0),
+            topSpeed: Math.max(0, Number(f.topSpeed.value) || 0),
+            accel: clampDecimal(f.accel.value, 0, 100),
+            handling: clampDecimal(f.handling.value, 0, 100),
+            nitro: clampDecimal(f.nitro.value, 0, 100),
+            owned: f.owned.checked,
+            events: {
+              summer: f.evSummer.checked,
+              turbo: f.evTurbo.checked,
+              team: f.evTeam.checked,
+            },
+          };
+          if (state.editingId) {
+            var car = state.cars.filter(function (c) {
+              return c.id === state.editingId;
+            })[0];
+            if (car) Object.assign(car, data);
+          } else {
+            data.id = uid();
+            state.cars.push(data);
+          }
+          try {
+            await save(state.cars);
+          } catch (e) {
+            console.error("Save failed", e);
+            alert("Could not save the car. Is PIT WALL server running?");
+            return;
+          }
+          closeModal();
+          renderAll();
+        });
+
+        function clamp(v, min, max) {
+          return Math.max(min, Math.min(max, v));
+        }
+
+        function clampDecimal(v, min, max) {
+          v = Number(v) || 0;
+          v = clamp(v, min, max);
+          return Math.round(v * 100) / 100;
+        }
+
+        // ---------- Theme ----------
+        var themeBtn = document.getElementById("themeToggle");
+        function applyTheme(t) {
+          if (t === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+            themeBtn.textContent = "Day track";
+          } else if (t === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+            themeBtn.textContent = "Night track";
+          } else {
+            document.documentElement.removeAttribute("data-theme");
+            themeBtn.textContent = "Toggle track";
+          }
+        }
+        var savedTheme = loadTheme();
+        applyTheme(savedTheme);
+        themeBtn.addEventListener("click", function () {
+          var current = document.documentElement.getAttribute("data-theme");
+          var next =
+            current === "dark" ? "light" : current === "light" ? null : "dark";
+          applyTheme(next);
+          saveTheme(next || "");
+        });
+
+        // ---------- Data migration / import ----------
+        var importBtn = document.getElementById("importBtn");
+        var importFile = document.getElementById("importFile");
+
+        importBtn.addEventListener("click", function () {
+          // Always open the file picker so the user can explicitly choose
+          // the JSON backup they want to import.
+          importFile.click();
+        });
+
+        importFile.addEventListener("change", async function () {
+          if (importFile.files && importFile.files[0]) {
+            await importFromFile(importFile.files[0]);
+            importFile.value = "";
+          }
+        });
+
+        // ---------- Init ----------
+        (async function init() {
+          try {
+            state.cars = await load();
+            renderAll();
+          } catch (e) {
+            console.error("Initial load failed", e);
+            tableWrap.innerHTML =
+              '<div class="empty-state"><h3>Could not load car database</h3><p>Start server.js and open <b>http://localhost:3000</b>.</p></div>';
+          }
+        })();
+      })();
+    </script>
+  </body>
+</html>
